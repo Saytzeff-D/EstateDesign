@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Real Estate</title>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/font-awesome.css">
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/animate.css">
+        <script src="bootstrap-4.5.0-dist/js/jquery.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="house.css">
+        <script type="text/javascript">
+	$(document).ready(function() {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+        // $('#navbar').click(function () {
+        //     $('ul').show(2000);
+        // })
+	});
+    </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-expand-lg nav-tabs shadow-lg fixed-top animate__animated animate__rotateIn">
+            <h3><a class="navbar-brand text-danger font-weight-bold float-left" href="house.html">GOODNESS 24</a></h3>
+            <button id="navbar" class="navbar-toggler float-right" data-toggle="collapse" data-target="#navigation">
+                <span class="navbar-toggler-icon text-white">&equiv;</span>
+            </button>
+            <div id="navigation" class="collapse navbar-collapse text-center">
+                <ul class="navbar-nav pl-5">
+                    <li class="nav-item">
+                        <a class="text-white nav-link font-weight-bold scroll" href="#pageHead">HOME</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#rent">FLATS FOR RENT</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                    <a class="nav-link text-white font-weight-bold scroll" href="#offers">SPECIAL OFFERS</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#house">OUR HOUSES</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#gallery">GALLERY</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#agent">AGENTS</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#discount">DISCOUNT</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#testimonial">TESTIMONIALS</a>
+                    </li>
+                     <li class="nav-item pl-2">
+                        <a class="nav-link text-white font-weight-bold scroll" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--carousel-->
+        <header id="pageHead" class="carousel slide pt-0 text-center" data-ride="carousel">
+		<ol class="carousel-indicators c-indicator">
+			<li data-target="#pageHead" data-slide-to="0"></li>
+			<li data-target="#pageHead" data-slide-to="1"></li>
+			<li data-target="#pageHead" data-slide-to="2"></li>
+			<li data-target="#pageHead" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner text-white">
+		<div class="carousel-item active" data-interval="5000">
+			<img src="images/img4.jpg" width="100%" height="655px" class="animate__animated animate__zoomIn">
+            <div class="carousel-caption">
+                <div class="mb-5 pb-5 animate__animated animate__slideInUp animate__slow">
+                <h1 class="text-danger"><span class="font-weight-bold">$3.500</span> / per month</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">apartment in</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">scotland's center</h1>
+                <button class="btn btn-danger btn-lg text-uppercase text-white mb-5 mt-3" data-toggle="modal" data-target="#scotland">learn more</button>
+                 </div>
+            </div>
+		</div>
+		<div class="carousel-item" data-interval="5000">
+			<img src="images/BK3.jpg" width="100%" height="655px">
+            <div class="carousel-caption">
+                <div class="mb-5 pb-5 animate__animated animate__slideInUp animate__slow">
+                <h1 class="text-danger"><span class="font-weight-bold">$6.500</span> / per month</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">apartment in</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">london's center</h1>
+                <button class="btn btn-danger btn-lg text-uppercase text-white mb-5 mt-3" data-toggle="modal" data-target="#london">learn more</button>
+                 </div>
+            </div>
+		</div>
+		<div class="carousel-item" data-interval="5000">
+			<img src="images/img5.jpg" width="100%" height="655px">
+            <div class="carousel-caption">
+                <div class="mb-5 pb-5 animate__animated animate__slideInUp animate__slow">
+                <h1 class="text-danger"><span class="font-weight-bold">$4.500</span> / per month</h1>
+                <h1 class="text-uppercase text-danger font-weight-bold" id="lagos">apartment in</h1>
+                <h1 class="text-uppercase text-danger font-weight-bold" id="lagos">lagos's center</h1>
+                <button class="btn btn-danger btn-lg text-uppercase text-white mb-5 mt-3" data-toggle="modal" data-target="#lagos">learn more</button>
+                 </div>
+            </div>
+		</div>
+		<div class="carousel-item" data-interval="5000">
+			<img src="images/img6.jpg" width="100%" class="p-0" height="655px">
+            <div class="carousel-caption">
+                <div class="mb-5 pb-5 animate__animated animate__slideInUp animate__slow">
+                <h1 class="text-danger"><span class="font-weight-bold">$10.500</span> / per month</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">apartment in</h1>
+                <h1 class="text-danger text-uppercase font-weight-bold">Abuja's megapolis</h1>
+                <button class="btn btn-danger btn-lg text-uppercase text-white mb-5 mt-3" data-toggle="modal" data-target="#abuja">learn more</button>
+                 </div>
+            </div>
+			</div>
+		</div>
+	</div>
+
+	<a href="#pageHead" class="carousel-control-prev" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</a>
+	<a href="#pageHead" class="carousel-control-next" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+	</header>
+    <!--modal-->
+    <div id="scotland" class="modal fade modal-dismissible">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-uppercase text-danger font-weight-bold">scotland's center</h2>
+                    <button class="close">
+                        <span data-dismiss="modal">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary">The so called center in scotland known as <span class="text-uppercase text-dark" id="marconikov">marconikov apartment</span> is a very fascinating center for dwelling.
+                        Check more for details from our testimonials. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+    <div id="london" class="modal fade modal-dismissible">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-uppercase text-danger font-weight-bold">london's center</h2>
+                    <button class="close">
+                        <span data-dismiss="modal">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary">The so called center in scotland known as <span class="text-uppercase text-dark" id="james">the james apartment</span> is a very fascinating center for dwelling.
+                        Check more for details from our testimonials. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+        <div id="lagos" class="modal fade modal-dismissible">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-uppercase text-danger font-weight-bold">lagos's center</h2>
+                    <button class="close">
+                        <span data-dismiss="modal">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary">The so called center in scotland known as <span class="text-uppercase text-dark" id="lekki">lekki apartment</span> is a very fascinating center for dwelling.
+                        Check more for details from our testimonials. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+        <div id="abuja" class="modal fade modal-dismissible">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-uppercase text-danger font-weight-bold">abuja's megapolis</h2>
+                    <button class="close">
+                        <span data-dismiss="modal">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary">The so called center in Nigeria known as <span class="text-uppercase text-dark" id="cluster">cluster's apartment</span> is a very fascinating center for dwelling.
+                        Check more for details from our testimonials. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--popular apartment-->
+    <div id="rent" class="container-fluid">
+        <h1 class="text-center pt-5 font-weight-bold animate__animated animate__fadeIn animate__slower">POPULAR APARTMENTS FOR RENT</h1>
+        <div class="container bg-danger" style="width:70px; height: 10px;">
+        &nbsp;
+        </div>
+        <div class="container w-75">
+            <p class="text-muted text-center animate__animated animate__slideInLeft animate__slower">Mauris sodales tellus vel felis dapibus, sit amet porta nibh egestas.
+                 Sed dignissim tellus quis sapien sagittis cursus. Cras porttitor auctor sapien eu tempus nunc placerat
+            </p>
+        </div>
+        <div class="container-fluid">
+            <div id="apartment" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+         <div class="carousel-item active animate__animated animate__fadeIn animate__slower">
+        <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/home.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/Copy of 4208103.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/House 1.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/BKG OUTSIDE.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/img4.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/inner.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/img6.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/Copy of dd.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <a href="#apartment" class="carousel-control-next" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+        </div>
+        </div>
+    </div>
+
+    <!--special offer-->
+    <div id="offers" class="container-fluid mt-lg-5 mt-0">
+        <h1 class="text-uppercase text-center font-weight-bold pt-5">special offer</h1>
+        <div class="container bg-danger" style="width:70px; height: 10px;">
+        &nbsp;
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/img5.jpg" class="w-100 h-100 p-0" id="img-offer" alt="">
+                </div>
+                <div class="col-md-6 bg-dark">
+                    <div class="m-5 pt-5 pb-0">
+                        <h6 class="text-white">UT PULVINAR TELLUS SED ELIT LUCTUS</h6>
+                        <p class="text-white pt-4">Fusce dolor libero, efficitur et lobortis at, faucibus nec nunc. 
+                            Proin fermentum turpis eget nisi lobortis.</p>
+                            <p class="text-white pt-5">FOR $1.500.000 INSTEAD $1.750.000!</p>
+                            <button class="btn btn-danger text-uppercase">learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!--our houses-->
+    <div id="house" class="container-fluid">
+        <h1 class="text-uppercase text-center pt-5">our houses</h1>
+        <div class="container bg-danger" style="width:70px; height: 10px;">
+        &nbsp;
+        </div>
+        <div class="container w-50 pt-2">
+        <p class="text-center text-muted">Fusce dolor libero, efficitur et lobortis at, faucibus nec nunc. Proin fermentum turpis eget nisi facilisis lobortis.
+             Praesent malesuada facilisis maximus.
+        </p>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/BK3.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/BKG HOME.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/House 1.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/BKG HOME 1.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="container-fluid mt-4 pl-4 pr-4">
+            <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/Interior 005.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/Interior 160.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/House 1.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="card">
+                    <h6 class="text-muted text-center pt-4"><span class="font-weight-bold">$3.500</span>/ per month</h6>
+                    <h5 class="text-center pl-5 pr-5 pt-2">UT PULVINAR TELLUS SED ELIT LUCTUS</h5>
+                    <p class="text-muted text-uppercase text-center font-weight-bold">12 reviews</p>
+                    <img src="images/Interior 115.jpg" height="200px;" alt="">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3">S<span>4</span></p>
+                        </div>
+                        <div class="col-3 border-right">
+                            <p class="text-muted text-center pt-3"><span class="form-group"><input type="checkbox"></span> 2</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-muted pt-3">130 sqft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <!--gallery-->
+    <div id="gallery" class="container-fluid mt-5 pb-5" style="background-color: #e6e6e6">
+        <h1 class="text-uppercase text-center pt-5">gallery</h1>
+        <div class="container w-75 text-center"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nisi velit. Ut id velit ex. Donec quis sapien gravida,
+rutrum metus eu, viverra elit. Sed sodales commodo ex, id porttitor leo ullamcorper nec.</p></div>
+<div class="container-fluid d-flex justify-content-center pl-5 pr-5">
+    <img src="images/BK3.jpg" class=" w-25 pr-2" alt="">
+    <img src="images/Copy of cn.jpg" class="w-25 pr-2" alt="">
+    <img src="images/img3.jpg" height="250px;;" class="w-25 pr-2" alt="">
+    <img src="images/House 1.jpg" class="w-25" alt="">
+</div>
+<div class="container-fluid mt-2 pl-5 pr-5 d-flex justify-content-center">
+    <img src="images/Interior 115.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/BKG HOME 1.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/home.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/Copy of dd.jpg" class="img-fluid w-25 pr-2" alt="">
+
+</div>
+<div class="container-fluid mt-3 pl-5 pr-5 d-flex justify-content-center">
+    <img src="images/img6.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/inner.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/img5.jpg" class="img-fluid w-25 pr-2" alt="">
+    <img src="images/img4.jpg" class="img-fluid w-25" alt="">
+</div>
+
+    </div>
+
+    <!--agent-->
+    <div id="agent" class="container">
+        <h2 class="text-uppercase text-center pt-5">our agents</h2>
+        <div class="container bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+        <div class="container w-75">
+            <p class="text-center text-muted pt-1">Fusce dolor libero, efficitur et lobortis at, faucibus nec nunc. Proin fermentum turpis eget nisi facilisis lobortis. Praesent malesuada facilisis maximus</p>
+        </div>
+
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <div class="flip-container">
+            <div class="flipper">
+                <div class="front"><img src="images/img1.jpg" class="omg-fluid w-100 h-100"></div>
+                <div class="back">
+                    <h4 class="text-uppercase text-white pt-5 mt-5">thomas sowyer</h4>
+                    <p class="text-center text-capitalize">changing your mind and changing the world</p>
+                    <p class="text-capitalize text-center">contact me on</p>
+                <div class="social-icons content-center">
+                    <a href="#"><div class="facebook text-center mr-3"><i class="fa fa-facebook pt-2"></i></div></a>
+                    <a href="#"><div class="twitter text-center mr-3"><i class="fa fa-twitter pt-2"></i></div></a>
+                    <a href="#"><div class="rss text-center mr-3"><i class="fa fa-rss pt-2"></i></div></a>
+                    <a href="#"><div class="vk text-center"><i class="fa fa-vk pt-2"></i></div></a>
+                </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                 <div class="col-6 col-lg-3 ml-0">
+                    <div class="flip-container">
+            <div class="flipper">
+                <div class="front"><img src="images/img2.jpg" class="img-fluid w-100 h-100"></div>
+                <div class="back">
+                    <h4 class="text-uppercase text-white pt-5 mt-5">gabson tukur</h4>
+                    <p class="text-center text-capitalize">changing your mind and changing the world</p>
+                    <p class="text-capitalize text-center">contact me on</p>
+                <div class="social-icons content-center">
+                    <a href="#"><div class="facebook text-center mr-3"><i class="fa fa-facebook pt-2"></i></div></a>
+                    <a href="#"><div class="twitter text-center mr-3"><i class="fa fa-twitter pt-2"></i></div></a>
+                    <a href="#"><div class="rss text-center mr-3"><i class="fa fa-rss pt-2"></i></div></a>
+                    <a href="#"><div class="vk text-center"><i class="fa fa-vk pt-2"></i></div></a>
+                </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                <div class="col-6 col-lg-3 pt-5 pt-lg-0">
+                    <div class="flip-container">
+            <div class="flipper">
+                <div class="front"><img src="images/img4(1).jpg" class="img-fluid w-100 h-100"></div>
+                <div class="back">
+                    <h4 class="text-uppercase text-white pt-5 mt-5">alex botha</h4>
+                    <p class="text-center text-capitalize">changing your mind and changing the world</p>
+                    <p class="text-capitalize text-center">contact me on</p>
+                <div class="social-icons content-center">
+                    <a href="#"><div class="facebook text-center mr-3"><i class="fa fa-facebook pt-2"></i></div></a>
+                    <a href="#"><div class="twitter text-center mr-3"><i class="fa fa-twitter pt-2"></i></div></a>
+                    <a href="#"><div class="rss text-center mr-3"><i class="fa fa-rss pt-2"></i></div></a>
+                    <a href="#"><div class="vk text-center"><i class="fa fa-vk pt-2"></i></div></a>
+                </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                    <div class="col-6 col-lg-3 pt-5 pt-lg-0">
+                    <div class="flip-container">
+            <div class="flipper">
+                <div class="front"><img src="images/img3(1).jpg" class="img-fluid w-100 h-100"></div>
+                <div class="back">
+                    <h4 class="text-uppercase text-white pt-5 mt-5">victoria olalekan</h4>
+                    <p class="text-center text-capitalize">changing your mind and changing the world</p>
+                    <p class="text-capitalize text-center">contact me on</p>
+                <div class="social-icons content-center">
+                    <a href="#"><div class="facebook text-center mr-3"><i class="fa fa-facebook pt-2"></i></div></a>
+                    <a href="#"><div class="twitter text-center mr-3"><i class="fa fa-twitter pt-2"></i></div></a>
+                    <a href="#"><div class="rss text-center mr-3"><i class="fa fa-rss pt-2"></i></div></a>
+                    <a href="#"><div class="vk text-center"><i class="fa fa-vk pt-2"></i></div></a>
+                </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--discount-->
+    <div id="discount" class="container-fluid mt-5" style="background-color: #7F7F7E;">
+        <h1 class="text-center text-white text-uppercase font-weight-bold pt-5">contact us and <span class="get">get 10%</span> discount</h1>
+        <div class="container w-75">
+        <p class="text-center pt-2" style="color: #CFCFCD;">Donec eleifend mauris eu leo varius consectetur. Aliquam luctus a lorem ac rutrum. Cras in nulla id mi ornare vestibulum.
+Donec et magna nulla. Pellentesque ut ipsum id nibh pretium blandit quis ac erat.</p>
+    </div>
+    <div class="d-flex justify-content-center pt-3 pb-5">
+    <button class="btn btn-danger btn-lg text-uppercase mb-5">contact us</button>
+    </div>
+    </div>
+
+    <!--testimonial-->
+    <div id="testimonial" class="container">
+        <h1 class="text-uppercase text-center pt-5">testimonials</h1>
+        <div class="container bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+        <div class="container pt-3 w-75">
+            <p class="text-center text-muted">Ut pulvinar tellus sed elit luctus aliquet. Suspendisse hendrerit sapien a aliquet porttitor.
+                 In hendrerit consequat neque eget egestas. In a consectetur felis.</p>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-uppercase ">spencer family</h3>
+                    <div class="bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+                    <p class="text-muted pt-5">Ut augue diam, lacinia fringilla erat eu, vehicula commodo quam. Aliquam eget accumsan ligula. Maecenas sit amet consectetur lectus. Suspendisse commodo et magna non pulvinar. 
+                        Quisque et ultricies sem, et vulputate dui. Morbi aliquam leo id ipsum tempus mollis.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-uppercase ">melander shoppings</h3>
+                    <div class="bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+                    <p class="text-muted pt-5">Ut augue diam, lacinia fringilla erat eu, vehicula commodo quam. Aliquam eget accumsan ligula. Maecenas sit amet consectetur lectus. Suspendisse commodo et magna non pulvinar. 
+                        Quisque et ultricies sem, et vulputate dui. Morbi aliquam leo id ipsum tempus mollis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-uppercase ">botah's family</h3>
+                    <div class="bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+                    <p class="text-muted pt-5">Ut augue diam, lacinia fringilla erat eu, vehicula commodo quam. Aliquam eget accumsan ligula. Maecenas sit amet consectetur lectus. Suspendisse commodo et magna non pulvinar. 
+                        Quisque et ultricies sem, et vulputate dui. Morbi aliquam leo id ipsum tempus mollis.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-uppercase ">gibson's family</h3>
+                    <div class="bg-danger" style="width:70px; height: 10px;">&nbsp;</div>
+                    <p class="text-muted pt-5">Ut augue diam, lacinia fringilla erat eu, vehicula commodo quam. Aliquam eget accumsan ligula. Maecenas sit amet consectetur lectus. Suspendisse commodo et magna non pulvinar. 
+                        Quisque et ultricies sem, et vulputate dui. Morbi aliquam leo id ipsum tempus mollis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact-->
+    <div id="contact" class="container-fluid mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6 p-5">
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <h1>Want to give us feedback?</h1>
+                        <h4 class="text-muted">Please share your feedback in the comment field</h4>
+                        <p class="text-muted mt-5">
+					<a class="text-danger" href="mail-to: enquiry@estate.com">enquiry@realestate.com</a> or<br> call <a class="text-danger" href="09012938949">09098231476</a>
+				</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-5" style="height:500px; background-color: darkred">
+                <form action="#" method="post" class="m-5">
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" id="firstname" class="form-control" rows="3" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Last Name" id="lastname" class="form-control" rows="3" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" minlength="3" maxlength="11" placeholder="Phone" id="phonenum" class="form-control" rows="3" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" id="email" class="form-control" rows="3" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="comment" class="form-control" placeholder="Comments" rows="3" required></textarea>
+                </div>
+                <button onclick="submitForm()" class="btn btn-danger float-right">SEND</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid shadow-lg text-danger fixed-bottom" style="background-color: black; justify-content: space-around; display:inline-flex">
+        <h6 class="mt-3 d-none d-md-block"><i class="fa fa-volume-control-phone"></i> +234-80-2398-7463</h6>
+        <h4 class="mt-2">Rates us more <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></h4>
+        <h6 class="mt-3 d-none d-md-block"><i class="fa fa-envelope"></i> enquiryrealestate@gmail.com</h6>
+    </div>
+
+    <script type="text/javascript">
+        const submitForm=()=>{
+            if (firstname.value == '' || lastname.value == '' || phonenum.value == '' || email.value.length < 8 || comment.value == '') {
+                console.log('Kindly complete the form');
+            }
+            else{
+             var myForm = {FirstName: firstname.value, LastName: lastname.value, PhoneNumber: phonenum.value, Email: email.value, Comments: comment.value};
+             if (!localStorage.hasOwnProperty('myData')) {
+                localStorage.myData = JSON.stringify([])
+            }
+        output = JSON.parse(localStorage.myData)
+        output.push(myForm)
+             localStorage.myData= JSON.stringify(output)
+             }
+        }
+    </script>
+    <script src="bootstrap-4.5.0-dist/js/SmoothScroll.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+.navbar{
+    background-color: black;
+}
+.c-indicator li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+a:hover{
+    transition: 2s;
+    color: red !important;
+}
+a:active{
+    color: red !important;
+}
+#lagos{
+	color: darkred;
+}
+#marconikov{
+	font-family: arial black;
+	font-size: 25px;
+}
+#james{
+	font-family: arial black;
+	 font-size: 25px;
+}
+#lekki{
+	font-family: arial black; 
+	font-size: 25px;
+}
+#cluster{
+	font-family: arial black; 
+	font-size: 25px;
+}
+#img-offer:hover{
+	transition: 10s;
+	transform: scale(1.1);
+	position: relative;
+}
+@media only screen and (max-width: 990px){
+	ul{
+		position: fixed;
+	opacity: 0.6;
+	background-color: black;
+		padding: 85px;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+.flip-container{
+ 	perspective: 1000px;
+ 	}
+.flip-container:hover .flipper, .flip-container.hover .flipper{
+	transform: rotateY(180deg);
+}
+.flipper{
+	transition: .75s;
+	transform-style: preserve-3d;
+}
+.flip-container, .front, .back{
+	height: 450px;
+	width: 250px;
+}
+.front, .back{
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 20px; 
+	backface-visibility: hidden;
+}
+
+.front{
+	z-index: 2;
+	background-color: teal;
+	transform: rotateY(0deg);
+}
+
+.back{
+	background-color: red;
+	transform: rotateY(180deg);
+}
+.social-icons{
+	display: inline-flex;
+}
+.facebook, .twitter,.rss, .vk{
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	color: red;
+	background-color: white;
+}
+.get{
+	color: red;
+	font-size: 40px;
+}
+::placeholder{
+	color: white !important;
+}
+.form-control{
+	background-color: #800000 !important;
+	color: white !important;
+	border: none !important;
+}
